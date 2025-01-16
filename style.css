@@ -1,0 +1,692 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+html{
+    font-size: 45%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 9rem 35%;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #050505;
+    padding: 3px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    box-shadow: 0.1rem 0.1rem rgba(0,0,0,0.1);
+}
+
+header{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:  3.5rem;
+    color: #fcf9f9;
+    font-weight: bold;  
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+html{
+    font-size: 45%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 9rem 35%;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #050505;
+    padding: 3px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    box-shadow: 0.1rem 0.1rem rgba(0,0,0,0.1);
+}
+
+header{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:  3.5rem;
+    color: #fcf9f9;
+    font-weight: bold;  
+}
+
+/*----------- menu -----------*/ 
+
+/*----------- menu -----------*/ 
+/*----------- location -----------*/ 
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+html{
+    font-size: 45%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 9rem 35%;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #050505;
+    padding: 3px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    box-shadow: 0.1rem 0.1rem rgba(0,0,0,0.1);
+}
+
+header{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:  3.5rem;
+    color: #fcf9f9;
+    font-weight: bold;  
+}
+
+/*----------- contact us -----------*/ 
+.contact-info h2, .contact-form h2 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+ /* Global Styling */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/*----------- contact us -----------*/ 
+
+/*----------- footer -----------*/  
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+footer{
+    background-color: #111;
+}
+
+.footerContainer{
+    width:100%;
+    padding: 7px 7px 7px;
+}
+
+.socialIocns{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIocns a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: #f7efef;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.socialIocns a i{
+    font-size: 2em;
+    color: #050505;
+    opacity: 0.9;
+}
+
+/* Hover Effects on Social Media Icons*/
+.socialIocns a:hover{
+    background-color: #e74747;
+    transition: 0.5s;
+}
+
+.socialIocns a:hover{
+    color: #f7efef;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 5px;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul a{
+    color: #f7efef;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #fa0707;
+    padding: 5px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: #f0e4e4;
+    font-size: 1em;
+}
+
+
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+     /* Main Section */
+     main {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .map-container {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+    }
+
+    main {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+        /* Contact Form Styling */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info, .contact-form {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+/*----------- location -----------*/ 
+
+/*----------- footer -----------*/  
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+footer{
+    background-color: #111;
+}
+
+.footerContainer{
+    width:100%;
+    padding: 7px 7px 7px;
+}
+
+.socialIocns{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIocns a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: #f7efef;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.socialIocns a i{
+    font-size: 2em;
+    color: #050505;
+    opacity: 0.9;
+}
+
+/* Hover Effects on Social Media Icons*/
+.socialIocns a:hover{
+    background-color: #e74747;
+    transition: 0.5s;
+}
+
+.socialIocns a:hover{
+    color: #f7efef;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 5px;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul a{
+    color: #f7efef;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #fa0707;
+    padding: 5px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: #f0e4e4;
+    font-size: 1em;
+}
+
+
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+     /* Main Section */
+     main {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .map-container {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+    }
+
+    main {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+        /* Contact Form Styling */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info, .contact-form {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+/*----------- footer -----------*/  
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+footer{
+    background-color: #111;
+}
+
+.footerContainer{
+    width:100%;
+    padding: 7px 7px 7px;
+}
+
+.socialIocns{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIocns a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: #f7efef;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.socialIocns a i{
+    font-size: 2em;
+    color: #050505;
+    opacity: 0.9;
+}
+
+/* Hover Effects on Social Media Icons*/
+.socialIocns a:hover{
+    background-color: #e74747;
+    transition: 0.5s;
+}
+
+.socialIocns a:hover{
+    color: #f7efef;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 5px;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul a{
+    color: #f7efef;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #fa0707;
+    padding: 5px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: #f0e4e4;
+    font-size: 1em;
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruwe Kopi - Menu</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf3e0;
+            color: #4a3f35;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #d3b8a3;
+            color: #fff;
+        }
+
+        header .logo {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        nav.navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav.navbar a:hover {
+            color: #4a3f35;
+        }
+
+        .register-icon {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 10px;
+            background-color: #4a3f35;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .register-icon i {
+            margin-right: 8px;
+        }
+
+        .register-icon:hover {
+            background-color: #d3b8a3;
+        }
+
+        .menu-section {
+            background: #f4e6d4;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px auto;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            max-width: 1100px;
+        }
+
+        .menu-section h2 {
+            font-size: 2rem;
+            color: #8b4513;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #a0522d;
+            padding-bottom: 5px;
+        }
+
+        .menu-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-section li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10px;
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .menu-section li:hover {
+            background-color: #f0e0d6;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .menu-section li img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .menu-section li span {
+            font-weight: bold;
+            color: #8b4513;
+            font-size: 1.5rem;
+        }
+
+        .menu-section li .add-to-cart {
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .menu-section li .add-to-cart:hover {
+            background-color: #a0522d;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #d3b8a3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+
+            footer {
+            background-color: #d3b8a3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer .socialIocns a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        footer .socialIocns a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerNav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        footer .footerNav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        footer .footerNav ul li a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerBottom {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <a href="index.html">
+        <img src="images/logo.jpg" class="logo" alt="Ruwe Kopi Logo">
+    </a>
+    <h1>Menu</h1>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="location.html">Location</a>
+        <a href="infocust.html">Customer</a>
+    </nav>
+    <a href="cart.html" class="register-icon">
+        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+    </a>
+</header>
+
+<!-- Menu Sections -->
+<div class="menu-section" id="main-course">
+    <h2>Main Course</h2>
+    <ul>
+        <li>
+            <img src="images/cheese burger.jpg" alt="Cheese Burger">
+            Cheese Burger <span>RM18</span>
+            <button class="add-to-cart" data-name="Cheese Burger" data-price="18" data-image="images/cheese burger.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/chicken sandwich.jpg" alt="Chicken Sandwich">
+            Chicken Sandwich <span>RM18</span>
+            <button class="add-to-cart" data-name="Chicken Sandwich" data-price="18" data-image="images/chicken sandwich.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/fish n chips.jpg" alt="Fish N Chips">
+            Fish N Chips <span>RM22</span>
+            <button class="add-to-cart" data-name="Fish N Chips" data-price="22" data-image="images/fish n chips.jpg">
+                Add to Cart
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div class="menu-section" id="desserts">
+    <h2>Desserts</h2>
+    <ul>
+        <li>
+            <img src="images/chocolate-fudge.jpg" alt="Chocolate Fudge">
+            Chocolate Fudge <span>RM18</span>
+            <button class="add-to-cart" data-name="Chocolate Fudge" data-price="18" data-image="images/chocolate-fudge.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/strawberry danish.jpg" alt="Strawberry Danish">
+            Strawberry Danish <span>RM15</span>
+            <button class="add-to-cart" data-name="Strawberry Danish" data-price="15" data-image="images/strawberry danish.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/yuri matcha cake.jpg" alt="Yuri Matcha Cake">
+            Yuri Matcha Cake <span>RM23</span>
+            <button class="add-to-cart" data-name="Yuri Matcha Cake" data-price="23" data-image="images/yuri matcha cake.jpg">
+                Add to Cart
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div class="menu-section" id="beverages">
+    <h2>Beverages</h2>
+    <ul>
+        <li>
+            <img src="images/ajisai dirty matcha.jpg" alt="Ajisai Dirty Matcha">
+            Ajisai Dirty Matcha <span>RM16</span>
+            <button class="add-to-cart" data-name="Ajisai Dirty Matcha" data-price="16" data-image="images/ajisai dirty matcha.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/hot-chocolate.jpg" alt="Hot Chocolate">
+            Hot Chocolate <span>RM15</span>
+            <button class="add-to-cart" data-name="Hot Chocolate" data-price="15" data-image="images/hot-chocolate.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/ice-americano.jpg" alt="Ice Americano">
+            Ice Americano <span>RM11</span>
+            <button class="add-to-cart" data-name="Ice Americano" data-price="11" data-image="images/ice-americano.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/ice-latte.jpg" alt="Ice Latte">
+            Ice Latte <span>RM13</span>
+            <button class="add-to-cart" data-name="Ice Latte" data-price="13" data-image="images/ice-latte.jpg">
+                Add to Cart
+            </button>
+        </li>
+        <li>
+            <img src="images/jasmine-citrus.jpg" alt="Jasmine Citrus">
+            Jasmine Citrus <span>RM16</span>
+            <button class="add-to-cart" data-name="Jasmine Citrus" data-price="16" data-image="images/jasmine-citrus.jpg">
+                Add to Cart
+            </button>
+        </li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<footer>
+    <footer>
+        <div class="socialIocns">
+            <a href="https://www.instagram.com/ruwekopi/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@ruwekopi"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/p/Ruwe-kopi-100088086753230/"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2022 Ruwe Kopi - All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+</footer>
+
+<script>
+    // Function to update the cart count in the header
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.getElementById("cart-count").textContent = cart.length;
+    }
+
+    // Event listener for adding items to the cart
+    document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", () => {
+            const name = button.getAttribute("data-name");
+            const price = button.getAttribute("data-price");
+            const image = button.getAttribute("data-image");
+
+            // Create a cart item and push to localStorage
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Update the cart count in the header
+            updateCartCount();
+
+            // Show a confirmation alert
+            alert(`${name} has been added to your cart!`);
+        });
+    });
+
+    // Initial call to update the cart count on page load
+    updateCartCount();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf3e0;
+            color: #4a3f35;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #8b4513;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cart-item {
+            background: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .cart-item-details {
+            margin-left: 15px;
+            flex: 1;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-buttons button {
+            padding: 5px 10px;
+            font-size: 1rem;
+            background-color: #d3b8a3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .quantity-buttons button:hover {
+            background-color: #8b4513;
+            color: white;
+        }
+
+        .remove-button {
+            background-color: #ff6666;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: #ff4444;
+        }
+
+        .total-price {
+            font-weight: bold;
+            color: #8b4513;
+            font-size: 1.5rem;
+        }
+
+        .cart-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #d3b8a3;
+            color: #fff;
+        }
+
+        .checkout-button {
+            background-color: #4a3f35;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<h2>Your Cart</h2>
+<div class="cart-items" id="cart-items">
+    <!-- Cart items will be dynamically displayed here -->
+</div>
+
+<div class="cart-footer">
+    <span class="total-price" id="total-price">Total: RM0</span>
+    <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+</div>
+
+<script>
+    // Function to display the cart items from localStorage
+    function displayCartItems() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItemsContainer = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+
+        cartItemsContainer.innerHTML = ""; // Clear existing items
+        let totalPrice = 0;
+
+        cart.forEach((item, index) => {
+            totalPrice += parseFloat(item.price) * item.quantity;
+
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+
+            cartItem.innerHTML = `
+                <div style="display: flex; align-items: center;">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <h3>${item.name}</h3>
+                        <p>Price: RM${item.price}</p>
+                    </div>
+                </div>
+                <div class="cart-item-actions">
+                    <div class="quantity-buttons">
+                        <button onclick="updateQuantity(${index}, 'decrease')">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity(${index}, 'increase')">+</button>
+                    </div>
+                    <button class="remove-button" onclick="removeItem(${index})">Remove</button>
+                </div>
+            `;
+
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        totalPriceElement.textContent = `Total: RM${totalPrice.toFixed(2)}`;
+    }
+
+    // Function to update the quantity of an item in the cart
+    function updateQuantity(index, action) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        if (action === 'increase') {
+            cart[index].quantity++;
+        } else if (action === 'decrease' && cart[index].quantity > 1) {
+            cart[index].quantity--;
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCartItems();
+    }
+
+    // Function to remove an item from the cart
+    function removeItem(index) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        cart.splice(index, 1); // Remove item at the given index
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCartItems();
+    }
+
+    // Call the displayCartItems function when the page loads
+    displayCartItems();
+</script>
+
+</body>
+</html>

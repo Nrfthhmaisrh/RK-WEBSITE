@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruwe Kopi</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf3e0;
+            color: #4a3f35;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #d3b8a3;
+            color: #fff;
+        }
+
+        header .logo {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        nav.navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav.navbar a:hover {
+            color: #4a3f35;
+        }
+
+        .register-icon {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 10px;
+            background-color: #4a3f35;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .register-icon i {
+            margin-right: 8px;
+        }
+
+        .register-icon:hover {
+            background-color: #d3b8a3;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fef5e7;
+        }
+
+        .welcome-section img {
+            width: 120px;
+            border-radius: 50%;
+        }
+
+        .welcome-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #4a3f35;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            color: #6e5d52;
+            margin: 10px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #4a3f35;
+            margin: 30px 0;
+        }
+
+        .best-seller-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .best-seller-images img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .best-seller-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .purpose-section {
+            background-color: #f5e8d5;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .purpose-section p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #d3b8a3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer .socialIocns a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        footer .socialIocns a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerNav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        footer .footerNav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        footer .footerNav ul li a:hover {
+            color: #4a3f35;
+        }
+        footer .footerBottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <a href="index.html">
+        <img src="Picture/logo.jpg" class="logo" alt="Ruwe Kopi Logo">
+    </a>
+    <h1>Contact Us</h1>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="location.html">Location</a>
+        <a href="infocust.html">Customer</a>
+    </nav>
+    <!-- Register Icon -->
+    <a href="register.html" class="register-icon">
+        <i class="fas fa-user-plus"></i> Register
+    </a>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ruwe Kopi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            padding: 2rem;
+            max-width: 600px;
+            margin: 1rem auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info h2 {
+            color: #795548;
+            font-weight: 700;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        .social-links {
+            margin-top: 1.5rem;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 8px;
+            text-decoration: none;
+            color: #4a3f35;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .social-links a:hover {
+            color: #d3b8a4;
+        }
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .business-hours {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .business-hours h2 {
+            color: #795548;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .business-hours ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .business-hours li {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+   
+    </style>
+</head>
+<body>
+ 
+
+    <div class="container">
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Phone: 019-909 3629</p>
+            <p>Email: info@ruwekopi.com</p>
+            <p>Address: PT4553, Lebuhraya Tanah Merah, Kg. Hutan Kuin, Machang, Kelantan</p>
+            <div class="social-links">
+                <p>Follow us on:</p>
+                <a href="https://www.facebook.com/ruwekopi" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook logo">Facebook
+                </a>
+                <a href="https://www.instagram.com/ruwekopi" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram logo">Instagram
+                </a>
+                <a href="https://www.tiktok.com/@ruwekopi" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok logo">TikTok
+                </a>
+            </div>
+        </section>
+
+        <section class="business-hours">
+            <h2>Business Hours</h2>
+            <ul>
+                <li>Monday: 1 pm–1 am</li>
+                <li>Tuesday: 1 pm–1 am</li>
+                <li>Wednesday: 1 pm–1 am</li>
+                <li>Thursday: 1 pm–1 am</li>
+                <li>Friday: 1 pm–1 am</li>
+                <li>Saturday: 1 pm–1 am</li>
+                <li>Sunday: 1 pm–1 am</li>
+            </ul>
+        </section>
+    </div>
+    <!-- Footer -->
+<footer>
+  <div class="socialIocns">
+      <a href="https://www.instagram.com/ruwekopi/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@ruwekopi"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/p/Ruwe-kopi-100088086753230/"><i class="fab fa-facebook"></i></a>
+  </div>
+  <div class="footerNav">
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="location.html">Location</a></li>
+      </ul>
+  </div>
+  <div class="footerBottom">
+      <p>&copy; 2022 Ruwe Kopi - All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

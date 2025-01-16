@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf3e0;
+            color: #4a3f35;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #d3b8a3;
+            color: #fff;
+        }
+
+        header .logo {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        nav.navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav.navbar a:hover {
+            color: #4a3f35;
+        }
+
+        .register-icon {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 10px;
+            background-color: #4a3f35;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .register-icon i {
+            margin-right: 8px;
+        }
+
+        .register-icon:hover {
+            background-color: #d3b8a3;
+        }
+
+        footer {
+            background-color: #d3b8a3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer .socialIocns a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        footer .socialIocns a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerNav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        footer .footerNav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        footer .footerNav ul li a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerBottom {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .about-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5e8d5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-container h5 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #4a3f35;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #6e5d52;
+            text-align: justify;
+        }
+
+        .about-container .quote {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fef5e7;
+            border-left: 4px solid #d3b8a3;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <a href="index.html">
+        <img src="Picture/logo.jpg" class="logo" alt="Ruwe Kopi Logo">
+    </a>
+    <h1>About Us</h1>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="location.html">Location</a>
+        <a href="infocust.html">Customer</a>
+    </nav>
+    <a href="register.html" class="register-icon">
+        <i class="fas fa-user-plus"></i> Register
+    </a>
+</header>
+<!-- About Us Section -->
+<div class="about-container text-align: justify-content">
+  <h5>Ruwe Kopi ☆</h5>
+  <p>Born from a love of coffee and a deep appreciation for culture, Ruwe Kopi blends the warmth of Kelantanese 
+    tradition with the inspiration of Indonesia’s coffee heritage. The name "Ruwe" is pronounced ru (as in "ruby") and we (as in "where"), 
+    a playful nod to its unique identity.</p>  
+
+  <p>Our journey began in December 2022 as a humble coffee vendor in Tanah Merah. By March 2023, fueled by passion and dedication, 
+    we opened our first physical shop. Starting with just six chairs and three tables, Ruwe Kopi has grown into a cozy haven for 
+    coffee lovers—a place to gather, connect, and savor every sip.</p>
+
+  <p>Inspired by a soul-refreshing trip across Indonesia, Miss Anonymous founded Ruwe Kopi, transforming her passion for coffee into 
+    her first-ever business. The idea was to establish a "aesthetically pleasing" coffee shop that doubles as a community in 
+    addition to a café. <br><br> We invite you to join us and experience the perfect blend of culture, coffee, and connection.</p>
+
+  <div class="quote">
+      BEWARE OF COFFEE BUMP!
+  </div>
+  <p><strong>Opening Hours:</strong> Everyday from 1 P.M. to 1 A.M.</p>
+  <p><strong>Address:</strong> Beside Kak Mah Satay, Machang.</p>
+</div>
+
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 4px;
+}
+
+/* Pictures */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column">
+    <img src="kami kopi/kami kopi3.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="kami kopi/kami kopi8.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="kami kopi/kami kopi2.jpg" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="kami kopi/kami kopi5.jpg" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="kami kopi/kami kopi7.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>  
+
+<!-- Footer -->
+<footer>
+  <div class="socialIocns">
+      <a href="https://www.instagram.com/ruwekopi/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@ruwekopi"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/p/Ruwe-kopi-100088086753230/"><i class="fab fa-facebook"></i></a>
+  </div>
+  <div class="footerNav">
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="location.html">Location</a></li>
+      </ul>
+  </div>
+  <div class="footerBottom">
+      <p>&copy; 2022 Ruwe Kopi - All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

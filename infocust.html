@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf3e0;
+            color: #4a3f35;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #d3b8a3;
+            color: #fff;
+        }
+
+        header .logo {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        nav.navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        nav.navbar a:hover {
+            color: #4a3f35;
+        }
+
+        .register-icon {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 10px;
+            background-color: #4a3f35;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .register-icon i {
+            margin-right: 8px;
+        }
+
+        .register-icon:hover {
+            background-color: #d3b8a3;
+        }
+
+        footer {
+            background-color: #d3b8a3;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer .socialIocns a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        footer .socialIocns a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerNav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        footer .footerNav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        footer .footerNav ul li a:hover {
+            color: #4a3f35;
+        }
+
+        footer .footerBottom {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5e8d5;
+            border-radius: 10px;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #4a3f35;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            text-align: center;
+            color: #6e5d52;
+        }
+
+        .reward-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fef5e7;
+            border: 2px solid #d3b8a3;
+            color: #4a3f35;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Profile Styles */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 30%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .upload-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .upload-container input[type="file"] {
+            margin-top: 10px;
+        }
+        /* Button Styles */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4a3f35;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #d3b8a3;
+        }
+
+        .badge-container {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 50px auto;
+            max-width: 1000px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .badge-container h3 {
+            font-size: 2.5rem; /* Increased font size for the heading */
+            color: #8b4513;
+            margin-bottom: 40px;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 1rem; /* Font size for badge name */
+            font-weight: bold;
+            color: #4a3f35;
+            border-radius: 50%;
+            background-color: #f7d6c2;
+            width: 150px;  /* Increased badge size */
+            height: 150px; /* Increased badge size */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .badge img {
+            width: 80px; /* Ensuring the image fits within the circle */
+            height: 80px; /* Ensuring the image fits within the circle */
+            border-radius: 50%;
+            object-fit: cover; /* Ensures the image covers the circle without distortion */
+            margin-bottom: 10px;
+        }
+
+        .badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Badge Descriptions */
+        .badge-name {
+            font-size: 1.2rem; /* Increased font size for badge name */
+            color: #4a3f35;
+            margin-top: 10px;
+        }
+
+        /* Specific Badge Styles */
+        .badge-coffee-lover { background-color: #ffe8cc; }
+        .badge-sweet-tooth { background-color: #fde2e2; }
+        .badge-newbie { background-color: #d8f3dc; }
+        .badge-night-owl { background-color: #d4e2fc; }
+        .badge-tea-lover { background-color: #e5f9d5; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img src="Picture/logo.jpg" class="logo" alt="Ruwe Kopi Logo">
+        </a>
+        <h1>Customer</h1>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="location.html">Location</a>
+            <a href="infocust.html">Customer</a>
+        </nav>
+        <a href="register.html" class="register-icon">
+            <i class="fas fa-user-plus"></i> Register
+        </a>
+    </header>
+
+    <!-- User Information -->
+    <div class="container">
+        <h1>User Information</h1>
+        <div class="profile-container">
+            <img id="profilePicture" 
+                 src="C:\Users\user\OneDrive\Pictures\kami kopi\default.jpg" 
+                 alt="Default Avatar" 
+                 class="profile-pic">
+        </div>
+        
+        <div class="upload-container">
+            <label for="profileImageUpload">Choose your profile picture:</label>
+            <input type="file" id="profileImageUpload" accept="image/*">
+        </div>
+        
+        <p><b>User's Name</b>: Erdena</p>  
+        <p><b>Phone Number</b>: 012-3456781</p> 
+        <p><b>Email</b>: profile@gmail.com</p> 
+    </div>
+    <!-- Reminder Section -->
+<div class="container">
+    <h1>Little Notes ♡</h1>
+    <p><b>✨ Remember: ✨</b><br> 
+        For every 100 points, you can redeem them anytime from our shop! 
+        <br> Reach multiples of 100 points to unlock mystery gifts or enjoy your favorite drink for free!</p>
+</div>
+
+    <!-- Rewards Section -->
+    <div class="container">
+        <h1>Coffee Shop Rewards</h1>
+        <p>Earn points with every purchase! Collect them now!</p>
+        <div>
+            <label for="purchaseAmount">Enter purchase amount (RM):</label>
+            <input type="number" id="purchaseAmount" placeholder="Enter amount">
+        </div>
+        <button id="earnPoints" class="btn">Add Points</button>
+        <h3>Your Total Points: <span id="points">0</span></h3>
+        <div id="rewardMessage" class="reward-message"></div>
+    </div>
+
+<!-- Badge Section -->
+<div class="badge-container">
+    <h3>Ruwe Kopi Badges</h3>
+    <div class="badges">
+        <span class="badge badge-coffee-lover" title="Earned for purchasing 10 beverages!">
+            <img src="badges/coffee badge.jpg" alt="Coffee Lover">
+            <div class="badge-name">Coffee Lover</div>
+        </span>
+        <span class="badge badge-sweet-tooth" title="Earned for ordering 5 desserts!">
+            <img src="badges/dessert badge.jpg" alt="Sweet Tooth">
+            <div class="badge-name">Sweet Tooth</div>
+        </span>
+        <span class="badge badge-newbie" title="Welcome badge for new customers!">
+            <img src="badges/newbie badge.jpg" alt="Newbie">
+            <div class="badge-name">Newbie</div>
+        </span>
+        <span class="badge badge-night-owl" title="Awarded for visiting late night hours!">
+            <img src="badges/owl badge 2.jpg" alt="Night Owl">
+            <div class="badge-name">Night Owl</div>
+        </span>
+        <span class="badge badge-tea-lover" title="Earned for purchasing 5 tea beverages!">
+            <img src="badges/matcha badge.jpg" alt="Tea Lover">
+            <div class="badge-name">Tea Lover</div>
+        </span>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="socialIocns">
+        <a href="https://www.instagram.com/ruwekopi/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ruwekopi"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/p/Ruwe-kopi-100088086753230/"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="footerNav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="location.html">Location</a></li>
+        </ul>
+    </div>
+    <div class="footerBottom">
+        <p>&copy; 2022 Ruwe Kopi - All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+    // Simulate badge unlocking based on user actions
+    const badges = document.querySelectorAll('.badge');
+    badges.forEach((badge) => {
+        badge.addEventListener('click', () => {
+            alert(`You clicked on the badge: "${badge.title}"`);
+        });
+    });
+
+    document.getElementById("profileImageUpload").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            // Update the image source with the uploaded file
+            document.getElementById("profilePicture").src = e.target.result;
+        };
+        reader.readAsDataURL(file); // Read the file as a Data URL
+    } else {
+        alert("No image selected or an error occurred. Please try again.");
+    }
+});
+
+    // Initialize points
+    let userPoints = 0;
+    let totalPoints = 0;
+    const rewardThreshold = 100;
+    // Function to add points
+    function addPoints(purchaseAmount) {
+        const pointsEarned = Math.round(purchaseAmount); // Round points to avoid floating-point issues
+        userPoints += pointsEarned;
+        totalPoints += pointsEarned;
+
+        // Check if total points are a multiple of the reward threshold
+        let rewardMessage = "";
+
+        if (Math.floor(totalPoints / rewardThreshold) > Math.floor((totalPoints - pointsEarned) / rewardThreshold)) {
+            rewardMessage = `🎉 Congratulations! 🎉<br> You’ve reached ${totalPoints} points! 🎯🏆 <br><br> 
+                Visit our cafe to redeem your points for a free drink or a special gift! 
+                Thank you for being a valued part of the Ruwe Kopi family. ❤️`;
+        }
+
+        // Update the reward message and display it
+        document.getElementById("rewardMessage").innerHTML = rewardMessage;
+        document.getElementById("rewardMessage").style.display = rewardMessage ? "block" : "none";
+
+        // Update points display
+        document.getElementById("points").textContent = totalPoints;
+    }
+
+    // Add event listener
+    document.getElementById("earnPoints").addEventListener("click", function () {
+        const purchaseAmountElem = document.getElementById("purchaseAmount");
+        const purchaseAmount = parseFloat(purchaseAmountElem.value);
+
+        if (!isNaN(purchaseAmount) && purchaseAmount > 0) {
+            addPoints(purchaseAmount);
+            purchaseAmountElem.value = ""; // Reset input field
+        } else {
+            alert("Please enter a valid purchase amount greater than 0!");
+            purchaseAmountElem.value = ""; // Reset input field for invalid input
+        }
+    });
+</script>
+
+</body>
+</html>
